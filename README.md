@@ -1,2 +1,2 @@
 # AdvertismentPortal
-A simple web application written using C# &amp; ASP.NET &amp; Entity Framework, MS SQL
+A simple web application written using C# & ASP.NET & Entity Framework, cooperating with MS SQL database
