@@ -1,0 +1,48 @@
+﻿@model KewinWarzechaZad6.ViewModels.AdvertismentDetailsVM
+@{
+    ViewBag.Title = "AdvertismentDetails";
+}
+
+<html>
+<head>
+    <title>Szczegóły ogłoszenia</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center jumbotron page-title text-primary">
+                <h1>@Model.Title</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                @Model.Description
+            </div>
+            <div class="col-md-4">
+                <table class="table table-hover">
+                    <tr>
+                        <td>Kategoria: </td>
+                        <td>@Model.CategoryName</td>
+                    </tr>
+                    <tr>
+                        <td>Data dodania: </td>
+                        <td>@Model.DateOfAddition</td>
+                    </tr>
+                    <tr>
+                        <td>Cena: </td>
+                        <td>@Model.Price</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon: </td>
+                        <td>@Model.Phone</td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td>@Model.Email</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

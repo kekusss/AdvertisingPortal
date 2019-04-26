@@ -1,0 +1,42 @@
+﻿@model List<KewinWarzechaZad6.ViewModels.AllAdvertismentsVM>
+@{
+    ViewBag.Title = "AllAdvertisments";
+}
+
+<html>
+<head>
+    <title>Wszystkie ogłoszenia</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center jumbotron page-title text-primary">
+                <h1>Wszystkie ogłoszenia:</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Tytuł</th><th>Kategoria</th><th>Data dodania</th><th>Cena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var adv in Model)
+                        {
+                            <tr>
+                                <td>@Html.ActionLink(@adv.Title, "AdvertismentDetails", "Home", new { id = adv.Id }, null)</td>
+                                <td>@adv.CategoryName</td>
+                                <td>@adv.DateOfAddition.ToShortDateString()</td>
+                                <td>@adv.Price</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

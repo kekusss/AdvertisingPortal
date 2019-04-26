@@ -1,0 +1,64 @@
+﻿@model KewinWarzechaZad6.ViewModels.AdvertismentDetailsVM
+@{
+    ViewBag.Title = "Modyfikowanie ogłoszenia";
+}
+
+@using (Html.BeginForm("ModifyAdvertisment", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center jumbotron page-title text-primary">
+                <h1>Edytuj ogłoszenie</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <hr />
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Title, "Tytuł", htmlAttributes: new { @class = "control-label col-md-offset-3 col-md-2" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Price, "Cena", htmlAttributes: new { @class = "control-label col-md-offset-3 col-md-2" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Phone, "Telefon", htmlAttributes: new { @class = "control-label col-md-offset-3 col-md-2" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-offset-3 col-md-2" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description, "Opis", htmlAttributes: new { @class = "control-label col-md-offset-3 col-md-2" })
+                        <div class="col-md-4">
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-8">
+                            <input type="submit" value="Edytuj" class="btn btn-lg btn-primary search-block" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

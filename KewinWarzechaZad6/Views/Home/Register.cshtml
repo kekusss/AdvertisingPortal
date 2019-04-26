@@ -1,0 +1,34 @@
+﻿@model KewinWarzechaZad6.Models.Register
+@{
+    ViewBag.Title = "Zarejestruj się";
+}
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="container" style="margin: 20% 0 auto;">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>Zarejestruj się</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="form-group-lg">
+                    @Html.LabelFor(model => model.Login, "Login", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control search-block" } })
+                </div>
+                <div class="form-group-lg">
+                    @Html.LabelFor(model => model.Password, "Hasło", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @type = "password", @class = "form-control search-block" } })
+                </div>
+                <div class="form-group-lg">
+                    @Html.LabelFor(model => model.Email, "Adres E-mail", htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "email", @class = "form-control search-block" } })
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Zarejestruj" class="btn btn-lg btn-primary search-block" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
