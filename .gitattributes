@@ -1,5 +1,4 @@
 KewinWarzechaZad6/Scripts/* linguist-vendored
 KewinWarzechaZad6/bin/* linguist-vendored
 *.config linguist-language=C#
-*.xml linguist-vendored=C#
 *.xml linguist-language=C#
