@@ -1,4 +1,3 @@
-$ cat .gitattributes
 linguist-vendored=true
 *.rb linguist-vendored=C#
 *.rb linguist-language=C#
