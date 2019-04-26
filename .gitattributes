@@ -1,6 +1,7 @@
 $ cat .gitattributes
-*.rb linguist-language=Java
-*.rb linguist-vendored=Java
 linguist-vendored=true
+*.rb linguist-vendored=C#
 *.rb linguist-language=C#
 *.config linguist-language=C#
+*.xml linguist-vendored=C#
+*.xml linguist-language=C#
